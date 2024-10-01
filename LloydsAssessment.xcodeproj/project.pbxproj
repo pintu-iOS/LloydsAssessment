@@ -1,0 +1,718 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A11378062CAB18AA000924A2 /* LloydsAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11378052CAB18AA000924A2 /* LloydsAssessmentApp.swift */; };
+		A11378082CAB18AA000924A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11378072CAB18AA000924A2 /* ContentView.swift */; };
+		A11378212CAB18AD000924A2 /* LloydsAssessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11378202CAB18AD000924A2 /* LloydsAssessmentUITests.swift */; };
+		A11378232CAB18AD000924A2 /* LloydsAssessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11378222CAB18AD000924A2 /* LloydsAssessmentUITestsLaunchTests.swift */; };
+		A12500CF2CAB1A840040C30A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12500C32CAB1A840040C30A /* APIError.swift */; };
+		A12500D02CAB1A840040C30A /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12500C42CAB1A840040C30A /* APIService.swift */; };
+		A12500D12CAB1A840040C30A /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12500C52CAB1A840040C30A /* APIConstants.swift */; };
+		A12500D22CAB1A840040C30A /* IdentifiableError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12500C62CAB1A840040C30A /* IdentifiableError.swift */; };
+		A12500D42CAB1A840040C30A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A12500CA2CAB1A840040C30A /* Assets.xcassets */; };
+		A12500D52CAB1A840040C30A /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12500CC2CAB1A840040C30A /* BookViewModel.swift */; };
+		A12500D62CAB1A840040C30A /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12500CE2CAB1A840040C30A /* Book.swift */; };
+		A12500D82CAB1AFA0040C30A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12500D72CAB1AF90040C30A /* Constant.swift */; };
+		A12500DA2CAB1E900040C30A /* BooksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12500D92CAB1E900040C30A /* BooksListView.swift */; };
+		A12500ED2CAB2D900040C30A /* BookListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12500EC2CAB2D900040C30A /* BookListRowView.swift */; };
+		A17B7A1C2CABA07F00DCBF3A /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B7A1B2CABA07F00DCBF3A /* MockURLSession.swift */; };
+		A17B7A1E2CABA14500DCBF3A /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B7A1D2CABA14500DCBF3A /* APIServiceTests.swift */; };
+		A17B7A202CABA17600DCBF3A /* BookModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B7A1F2CABA17600DCBF3A /* BookModelTests.swift */; };
+		A17B7A222CABA1DA00DCBF3A /* BookViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B7A212CABA1DA00DCBF3A /* BookViewModelTests.swift */; };
+		A17B7A662CAC320B00DCBF3A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B7A652CAC320B00DCBF3A /* NetworkMonitor.swift */; };
+		A17B7A682CAC330000DCBF3A /* MockNetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17B7A672CAC330000DCBF3A /* MockNetworkMonitor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A11378132CAB18AD000924A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A11377FA2CAB18AA000924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A11378012CAB18AA000924A2;
+			remoteInfo = LloydsAssessment;
+		};
+		A113781D2CAB18AD000924A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A11377FA2CAB18AA000924A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A11378012CAB18AA000924A2;
+			remoteInfo = LloydsAssessment;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A11378022CAB18AA000924A2 /* LloydsAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LloydsAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11378052CAB18AA000924A2 /* LloydsAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LloydsAssessmentApp.swift; sourceTree = "<group>"; };
+		A11378072CAB18AA000924A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A11378122CAB18AD000924A2 /* LloydsAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LloydsAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A113781C2CAB18AD000924A2 /* LloydsAssessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LloydsAssessmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11378202CAB18AD000924A2 /* LloydsAssessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LloydsAssessmentUITests.swift; sourceTree = "<group>"; };
+		A11378222CAB18AD000924A2 /* LloydsAssessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LloydsAssessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A12500C32CAB1A840040C30A /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		A12500C42CAB1A840040C30A /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		A12500C52CAB1A840040C30A /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		A12500C62CAB1A840040C30A /* IdentifiableError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableError.swift; sourceTree = "<group>"; };
+		A12500CA2CAB1A840040C30A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A12500CC2CAB1A840040C30A /* BookViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		A12500CE2CAB1A840040C30A /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		A12500D72CAB1AF90040C30A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A12500D92CAB1E900040C30A /* BooksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListView.swift; sourceTree = "<group>"; };
+		A12500EC2CAB2D900040C30A /* BookListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListRowView.swift; sourceTree = "<group>"; };
+		A17B7A1B2CABA07F00DCBF3A /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		A17B7A1D2CABA14500DCBF3A /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
+		A17B7A1F2CABA17600DCBF3A /* BookModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModelTests.swift; sourceTree = "<group>"; };
+		A17B7A212CABA1DA00DCBF3A /* BookViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModelTests.swift; sourceTree = "<group>"; };
+		A17B7A5D2CABB71300DCBF3A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A17B7A652CAC320B00DCBF3A /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		A17B7A672CAC330000DCBF3A /* MockNetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkMonitor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A11377FF2CAB18AA000924A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A113780F2CAB18AD000924A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11378192CAB18AD000924A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A11377F92CAB18AA000924A2 = {
+			isa = PBXGroup;
+			children = (
+				A11378042CAB18AA000924A2 /* LloydsAssessment */,
+				A11378152CAB18AD000924A2 /* LloydsAssessmentTests */,
+				A113781F2CAB18AD000924A2 /* LloydsAssessmentUITests */,
+				A11378032CAB18AA000924A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A11378032CAB18AA000924A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A11378022CAB18AA000924A2 /* LloydsAssessment.app */,
+				A11378122CAB18AD000924A2 /* LloydsAssessmentTests.xctest */,
+				A113781C2CAB18AD000924A2 /* LloydsAssessmentUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A11378042CAB18AA000924A2 /* LloydsAssessment */ = {
+			isa = PBXGroup;
+			children = (
+				A12500CD2CAB1A840040C30A /* Model */,
+				A12500EE2CAB2DB30040C30A /* View */,
+				A12500CB2CAB1A840040C30A /* ViewModel */,
+				A12500C22CAB1A840040C30A /* NetworkService */,
+				A12500EF2CAB2E920040C30A /* Helpers */,
+				A12500C92CAB1A840040C30A /* Resources */,
+				A17B7A5C2CABB70800DCBF3A /* Preview Content */,
+			);
+			path = LloydsAssessment;
+			sourceTree = "<group>";
+		};
+		A11378152CAB18AD000924A2 /* LloydsAssessmentTests */ = {
+			isa = PBXGroup;
+			children = (
+				A17B7A6B2CAC36F300DCBF3A /* SupportFiles */,
+				A17B7A1D2CABA14500DCBF3A /* APIServiceTests.swift */,
+				A17B7A1F2CABA17600DCBF3A /* BookModelTests.swift */,
+				A17B7A212CABA1DA00DCBF3A /* BookViewModelTests.swift */,
+			);
+			path = LloydsAssessmentTests;
+			sourceTree = "<group>";
+		};
+		A113781F2CAB18AD000924A2 /* LloydsAssessmentUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A11378202CAB18AD000924A2 /* LloydsAssessmentUITests.swift */,
+				A11378222CAB18AD000924A2 /* LloydsAssessmentUITestsLaunchTests.swift */,
+			);
+			path = LloydsAssessmentUITests;
+			sourceTree = "<group>";
+		};
+		A12500C22CAB1A840040C30A /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				A17B7A652CAC320B00DCBF3A /* NetworkMonitor.swift */,
+				A12500C42CAB1A840040C30A /* APIService.swift */,
+				A12500C52CAB1A840040C30A /* APIConstants.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		A12500C92CAB1A840040C30A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A12500CA2CAB1A840040C30A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A12500CB2CAB1A840040C30A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A12500CC2CAB1A840040C30A /* BookViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A12500CD2CAB1A840040C30A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A12500CE2CAB1A840040C30A /* Book.swift */,
+				A12500C32CAB1A840040C30A /* APIError.swift */,
+				A12500C62CAB1A840040C30A /* IdentifiableError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A12500EE2CAB2DB30040C30A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A12500F02CAB2F340040C30A /* AppMainView */,
+				A12500F12CAB2F4C0040C30A /* BookListView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A12500EF2CAB2E920040C30A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A12500D72CAB1AF90040C30A /* Constant.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A12500F02CAB2F340040C30A /* AppMainView */ = {
+			isa = PBXGroup;
+			children = (
+				A11378052CAB18AA000924A2 /* LloydsAssessmentApp.swift */,
+				A11378072CAB18AA000924A2 /* ContentView.swift */,
+			);
+			path = AppMainView;
+			sourceTree = "<group>";
+		};
+		A12500F12CAB2F4C0040C30A /* BookListView */ = {
+			isa = PBXGroup;
+			children = (
+				A12500D92CAB1E900040C30A /* BooksListView.swift */,
+				A12500EC2CAB2D900040C30A /* BookListRowView.swift */,
+			);
+			path = BookListView;
+			sourceTree = "<group>";
+		};
+		A17B7A5C2CABB70800DCBF3A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A17B7A5D2CABB71300DCBF3A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A17B7A6B2CAC36F300DCBF3A /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A17B7A1B2CABA07F00DCBF3A /* MockURLSession.swift */,
+				A17B7A672CAC330000DCBF3A /* MockNetworkMonitor.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A11378012CAB18AA000924A2 /* LloydsAssessment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A11378262CAB18AD000924A2 /* Build configuration list for PBXNativeTarget "LloydsAssessment" */;
+			buildPhases = (
+				A11377FE2CAB18AA000924A2 /* Sources */,
+				A11377FF2CAB18AA000924A2 /* Frameworks */,
+				A11378002CAB18AA000924A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LloydsAssessment;
+			packageProductDependencies = (
+			);
+			productName = LloydsAssessment;
+			productReference = A11378022CAB18AA000924A2 /* LloydsAssessment.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A11378112CAB18AD000924A2 /* LloydsAssessmentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A11378292CAB18AD000924A2 /* Build configuration list for PBXNativeTarget "LloydsAssessmentTests" */;
+			buildPhases = (
+				A113780E2CAB18AD000924A2 /* Sources */,
+				A113780F2CAB18AD000924A2 /* Frameworks */,
+				A11378102CAB18AD000924A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A11378142CAB18AD000924A2 /* PBXTargetDependency */,
+			);
+			name = LloydsAssessmentTests;
+			productName = LloydsAssessmentTests;
+			productReference = A11378122CAB18AD000924A2 /* LloydsAssessmentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A113781B2CAB18AD000924A2 /* LloydsAssessmentUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A113782C2CAB18AD000924A2 /* Build configuration list for PBXNativeTarget "LloydsAssessmentUITests" */;
+			buildPhases = (
+				A11378182CAB18AD000924A2 /* Sources */,
+				A11378192CAB18AD000924A2 /* Frameworks */,
+				A113781A2CAB18AD000924A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A113781E2CAB18AD000924A2 /* PBXTargetDependency */,
+			);
+			name = LloydsAssessmentUITests;
+			productName = LloydsAssessmentUITests;
+			productReference = A113781C2CAB18AD000924A2 /* LloydsAssessmentUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A11377FA2CAB18AA000924A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					A11378012CAB18AA000924A2 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					A11378112CAB18AD000924A2 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = A11378012CAB18AA000924A2;
+					};
+					A113781B2CAB18AD000924A2 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = A11378012CAB18AA000924A2;
+					};
+				};
+			};
+			buildConfigurationList = A11377FD2CAB18AA000924A2 /* Build configuration list for PBXProject "LloydsAssessment" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A11377F92CAB18AA000924A2;
+			packageReferences = (
+			);
+			productRefGroup = A11378032CAB18AA000924A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A11378012CAB18AA000924A2 /* LloydsAssessment */,
+				A11378112CAB18AD000924A2 /* LloydsAssessmentTests */,
+				A113781B2CAB18AD000924A2 /* LloydsAssessmentUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A11378002CAB18AA000924A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12500D42CAB1A840040C30A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11378102CAB18AD000924A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A113781A2CAB18AD000924A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A11377FE2CAB18AA000924A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A12500D62CAB1A840040C30A /* Book.swift in Sources */,
+				A17B7A662CAC320B00DCBF3A /* NetworkMonitor.swift in Sources */,
+				A11378082CAB18AA000924A2 /* ContentView.swift in Sources */,
+				A12500D82CAB1AFA0040C30A /* Constant.swift in Sources */,
+				A12500D52CAB1A840040C30A /* BookViewModel.swift in Sources */,
+				A12500D12CAB1A840040C30A /* APIConstants.swift in Sources */,
+				A12500D22CAB1A840040C30A /* IdentifiableError.swift in Sources */,
+				A11378062CAB18AA000924A2 /* LloydsAssessmentApp.swift in Sources */,
+				A12500D02CAB1A840040C30A /* APIService.swift in Sources */,
+				A12500ED2CAB2D900040C30A /* BookListRowView.swift in Sources */,
+				A12500CF2CAB1A840040C30A /* APIError.swift in Sources */,
+				A12500DA2CAB1E900040C30A /* BooksListView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A113780E2CAB18AD000924A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A17B7A1E2CABA14500DCBF3A /* APIServiceTests.swift in Sources */,
+				A17B7A682CAC330000DCBF3A /* MockNetworkMonitor.swift in Sources */,
+				A17B7A1C2CABA07F00DCBF3A /* MockURLSession.swift in Sources */,
+				A17B7A222CABA1DA00DCBF3A /* BookViewModelTests.swift in Sources */,
+				A17B7A202CABA17600DCBF3A /* BookModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11378182CAB18AD000924A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11378212CAB18AD000924A2 /* LloydsAssessmentUITests.swift in Sources */,
+				A11378232CAB18AD000924A2 /* LloydsAssessmentUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A11378142CAB18AD000924A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A11378012CAB18AA000924A2 /* LloydsAssessment */;
+			targetProxy = A11378132CAB18AD000924A2 /* PBXContainerItemProxy */;
+		};
+		A113781E2CAB18AD000924A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A11378012CAB18AA000924A2 /* LloydsAssessment */;
+			targetProxy = A113781D2CAB18AD000924A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A11378242CAB18AD000924A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A11378252CAB18AD000924A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A11378272CAB18AD000924A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LloydsAssessment/Preview Content\"";
+				DEVELOPMENT_TEAM = 6W7WDMTV86;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pkraja.LloydsAssessment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A11378282CAB18AD000924A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LloydsAssessment/Preview Content\"";
+				DEVELOPMENT_TEAM = 6W7WDMTV86;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pkraja.LloydsAssessment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A113782A2CAB18AD000924A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6W7WDMTV86;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pkraja.LloydsAssessmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LloydsAssessment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LloydsAssessment";
+			};
+			name = Debug;
+		};
+		A113782B2CAB18AD000924A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6W7WDMTV86;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pkraja.LloydsAssessmentTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LloydsAssessment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LloydsAssessment";
+			};
+			name = Release;
+		};
+		A113782D2CAB18AD000924A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6W7WDMTV86;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pkraja.LloydsAssessmentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LloydsAssessment;
+			};
+			name = Debug;
+		};
+		A113782E2CAB18AD000924A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6W7WDMTV86;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pkraja.LloydsAssessmentUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LloydsAssessment;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A11377FD2CAB18AA000924A2 /* Build configuration list for PBXProject "LloydsAssessment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A11378242CAB18AD000924A2 /* Debug */,
+				A11378252CAB18AD000924A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A11378262CAB18AD000924A2 /* Build configuration list for PBXNativeTarget "LloydsAssessment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A11378272CAB18AD000924A2 /* Debug */,
+				A11378282CAB18AD000924A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A11378292CAB18AD000924A2 /* Build configuration list for PBXNativeTarget "LloydsAssessmentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A113782A2CAB18AD000924A2 /* Debug */,
+				A113782B2CAB18AD000924A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A113782C2CAB18AD000924A2 /* Build configuration list for PBXNativeTarget "LloydsAssessmentUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A113782D2CAB18AD000924A2 /* Debug */,
+				A113782E2CAB18AD000924A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A11377FA2CAB18AA000924A2 /* Project object */;
+}
