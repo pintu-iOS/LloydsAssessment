@@ -58,7 +58,7 @@ LloydsAssessment/
 # API
 The app fetches book data from a free book API. The base URL used in the project is:
 
--> https://freetestapi.com/api/v1/books?limit=5
+-> https://postman-library-api.glitch.me/books
 
 The API returns book details including id, title, author, publication_year, genre, description, and cover_image.
 
