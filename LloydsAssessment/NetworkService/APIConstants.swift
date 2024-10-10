@@ -8,16 +8,17 @@
 import Foundation
 
 struct APIConstants {
-    static let baseURL = "https://freetestapi.com/api/v1"
-    
+    //MARK: Base Url
+    static let baseURL = "https://postman-library-api.glitch.me"
+
     //API endpoints
     enum Endpoint {
-        case books(page: Int, limit: Int)
+        case books
         
         var url: URL? {
             switch self {
-            case .books(let page, let limit):
-                return URL(string: "\(APIConstants.baseURL)/books?limit=\(limit)&page=\(page)")
+            case .books:
+                return URL(string: "\(APIConstants.baseURL)/books")
             }
         }
     }

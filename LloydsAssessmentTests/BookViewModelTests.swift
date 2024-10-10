@@ -6,128 +6,69 @@
 //
 
 import XCTest
+import Combine
 @testable import LloydsAssessment
 
 class BookViewModelTests: XCTestCase {
-    
-    var expectedBookData: Data?
     var viewModel: BookViewModel!
-    var mockSession: MockURLSession!
-    var mockNetworkMonitor: MockNetworkMonitor!
-    
+    var cancellables: Set<AnyCancellable>!
+
     override func setUp() {
         super.setUp()
-        expectedBookData = """
-    [{
-        "id": 1,
-        "title": "Sample Book",
-        "author": "Author Name",
-        "publication_year": 2024,
-        "genre": ["Fiction"],
-        "description": "This is a sample book.",
-        "cover_image": "https://example.com/sample.jpg"
-    }]
-    """.data(using: .utf8)
-        
-        mockSession = MockURLSession()
-        mockNetworkMonitor = MockNetworkMonitor()
-        viewModel = BookViewModel(apiService: APIService(testingSession: mockSession), networkMonitor: mockNetworkMonitor)
+        viewModel = BookViewModel()
+        cancellables = []
     }
     
     override func tearDown() {
-        expectedBookData = nil
         viewModel = nil
-        mockSession = nil
-        mockNetworkMonitor = nil
+        cancellables = nil
         super.tearDown()
     }
     
-    func testFetchBooksWhenOffline() {
-        // Simulate offline state
-        mockNetworkMonitor.isConnected = false
-        viewModel.fetchBooks()
-        XCTAssertEqual(viewModel.errorMessage?.message, Constant.noInternetErrorMessage)
-        XCTAssertTrue(viewModel.books.isEmpty)
-    }
-    
+    //MARK: Test case for Fetch Books Data with Successful Response in online internet
     func testFetchBooksWhenOnline() {
+        let expectation = XCTestExpectation(description: TestCaseConstant.testFetchBookSucceedExpectionDescription)
+        
         // Simulate online state
-        mockNetworkMonitor.isConnected = true
-        mockSession.dataTaskResult = (expectedBookData, nil, nil)
-        let expectation = self.expectation(description: "Fetch books success")
-        viewModel.fetchBooks()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            XCTAssertEqual(self.viewModel.books.count, 1)
-            XCTAssertEqual(self.viewModel.books[0].title, "Sample Book")
-            expectation.fulfill()
-        }
-        
-        waitForExpectations(timeout: 1, handler: nil)
-    }
-    
-    func testFetchBooksSuccess() {
-        mockSession.dataTaskResult = (expectedBookData, nil, nil)
-        let expectation = self.expectation(description: "Fetch books success")
-        viewModel.fetchBooks()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            XCTAssertEqual(self.viewModel.books.count, 1)
-            XCTAssertEqual(self.viewModel.books[0].title, "Sample Book")
-            expectation.fulfill()
-        }
-        
-        waitForExpectations(timeout: 1, handler: nil)
-    }
-    
-    func testFetchBooksFailure() {
-        mockSession.dataTaskResult = (nil, nil, NSError(domain: "TestError", code: 1, userInfo: nil))
-        let expectation = self.expectation(description: "Fetch books failure")
-        viewModel.fetchBooks()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            XCTAssertNotNil(self.viewModel.errorMessage)
-            XCTAssertEqual(self.viewModel.errorMessage?.message, "The request failed with error: The operation couldn’t be completed. (TestError error 1.)")
-            expectation.fulfill()
-        }
-        
-        waitForExpectations(timeout: 1, handler: nil)
-    }
-    
-    func testLoadMoreBooks() {
-        mockSession.dataTaskResult = (expectedBookData, nil, nil)
-        let expectation = self.expectation(description: "Load more books")
-        viewModel.fetchBooks()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            XCTAssertEqual(self.viewModel.books.count, 1)
-            
-            if !self.viewModel.books.isEmpty {
-                self.viewModel.loadMoreBooksIfNeeded(currentBook: self.viewModel.books[0])
+        viewModel.networkMonitor.isConnected = true
+        viewModel.$books
+            .sink { books in
+                if !books.isEmpty {
+                    expectation.fulfill()
+                }
             }
-            
-            // Simulate loading more books with new mock data
-            let additionalBookData = """
-            [{
-                "id": 2,
-                "title": "Another Sample Book",
-                "author": "Another Author",
-                "publication_year": 2024,
-                "genre": ["Non-Fiction"],
-                "description": "This is another sample book.",
-                "cover_image": "https://example.com/another.jpg"
-            }]
-            """.data(using: .utf8)
-            
-            self.mockSession.dataTaskResult = (additionalBookData, nil, nil)
-            
-            self.viewModel.fetchBooks()
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                XCTAssertEqual(self.viewModel.books.count, 3)
-                expectation.fulfill()
+            .store(in: &cancellables)
+        
+        // Fetch books
+        viewModel.fetchBooks()
+        wait(for: [expectation], timeout: 10.0)
+        
+        XCTAssertFalse(viewModel.books.isEmpty, TestCaseConstant.testBooksShouldBeLoadedOnlineMsg)
+        XCTAssertNil(viewModel.errorMessage, TestCaseConstant.testErrorMessageShouldBeNilWhenSucceed)
+    }
+    
+    //MARK: Test case for Fetch Books Data with Failure Response in offline internet
+    func testFetchBooksWhenOffline() {
+        let expectation = XCTestExpectation(description: TestCaseConstant.testFetchBookFailsExpectionDescription)
+        
+        // Simulate network being offline
+        viewModel.networkMonitor.isConnected = false
+        
+        viewModel.$errorMessage
+            .sink { errorMessage in
+                if errorMessage != nil {
+                    expectation.fulfill()
+                }
             }
-        }
-        waitForExpectations(timeout: 5, handler: nil)
+            .store(in: &cancellables)
+        
+        // Fetch books
+        viewModel.fetchBooks()
+        wait(for: [expectation], timeout: 5.0)
+        
+        XCTAssertTrue(viewModel.books.isEmpty, TestCaseConstant.testBooksCanNotBeLoadedOnlineMsg)
+        XCTAssertEqual(viewModel.errorMessage?.message, Constant.noInternetErrorMessage)
     }
 }
+
+

@@ -7,6 +7,7 @@
 
 import Foundation
 
+//MARK: Identifiable Error Model
 struct IdentifiableError: Identifiable {
     let id = UUID()
     let message: String

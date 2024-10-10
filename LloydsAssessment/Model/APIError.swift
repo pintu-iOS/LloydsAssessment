@@ -7,6 +7,7 @@
 
 import Foundation
 
+//MARK: Enum For API Errors
 enum APIError: Error, LocalizedError {
     case invalidURL
     case requestFailed(Error)
@@ -14,6 +15,7 @@ enum APIError: Error, LocalizedError {
     case dataNotFound
     case decodingFailed(Error)
 
+    //Error description
     var errorDescription: String? {
         switch self {
         case .invalidURL:

@@ -11,21 +11,13 @@ import Combine
 class APIService {
     
     static let shared = APIService()
-    private let session: URLSessionProtocol
     
-    private init(session: URLSessionProtocol = URLSession.shared) {
-        self.session = session
-    }
+    private init() {}
     
-    //for testing purposes
-    init(testingSession: URLSessionProtocol) {
-        self.session = testingSession
-    }
-    
-    // Generic method to fetch data from an API
+    //MARK: Generic method to fetch data from an API
     func fetchData<T: Codable>(from url: URL, completion: @escaping (Result<T, APIError>) -> Void) {
         
-        session.dataTask(with: url) { [weak self] (data, response, error) in
+        URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
             guard let self = self else { return }
             
             if let error = error {
@@ -60,11 +52,3 @@ class APIService {
         }
     }
 }
-
-
-
-
-protocol URLSessionProtocol {
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
-}
-extension URLSession: URLSessionProtocol { }

@@ -16,7 +16,7 @@ struct BookListRowView: View {
                 .font(.headline)
             Text(Constant.author + book.author)
                 .font(.subheadline)
-            Text(Constant.published + String(book.publicationYear))
+            Text(Constant.published + String(book.yearPublished))
                 .font(.subheadline)
         }
     }

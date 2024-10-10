@@ -13,12 +13,14 @@ class NetworkMonitor: ObservableObject {
     private var queue: DispatchQueue
     @Published var isConnected: Bool = false
 
+    //MARK: Network Monitor Initialization
     init() {
         self.monitor = NWPathMonitor()
-        self.queue = DispatchQueue(label: "Monitor")
+        self.queue = DispatchQueue(label: DispatchQueueLabel.monitorDispatchLabel)
         startMonitoring()
     }
 
+    //MARK: Monitoring internet connections
     func startMonitoring() {
         monitor.pathUpdateHandler = { [weak self] path in
             DispatchQueue.main.async {
@@ -28,6 +30,7 @@ class NetworkMonitor: ObservableObject {
         monitor.start(queue: queue)
     }
 
+    //MARK: Deinit function is using here to cancel internet monitoring
     deinit {
         monitor.cancel()
     }

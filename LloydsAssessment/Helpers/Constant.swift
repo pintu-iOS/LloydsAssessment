@@ -16,3 +16,7 @@ struct Constant {
     static let invalidUrlErrorMessage =  "Invalid URL"
     static let unknownErrorMessage = "An unknown error occurred"
 }
+
+struct DispatchQueueLabel {
+    static let monitorDispatchLabel = "Monitor"
+}
