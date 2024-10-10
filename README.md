@@ -42,33 +42,7 @@ This project follows the MVVM (Model-View-ViewModel) architecture pattern. The r
 
 **Service**: (APIService) is responsible for making network requests to fetch the book data from the API.
 
-LloydsAssessment/
-│
-├── Model/
-│   ├── Book.swift
-│   ├── APIError.swift
-│   ├── IdentifiableError.swift
-│
-├── ViewModel/
-│   ├── BookViewModel.swift
-│
-├── View/
-│   ├── BooksListView.swift
-│   ├── BookListRowView.swift
-│   ├── ContentView.swift
-│
-├── NetworkService/
-│   ├── NetworkMonitor.swift
-│   ├── APIService.swift
-│   ├── APIConstants.swift
-│
-├── Tests/
-│   ├── APIServiceTests.swift
-│   ├── BookModelTests.swift
-│   ├── BookViewModelTests.swift
-│
-└── README.md
-
+<img width="236" alt="Screenshot 2024-10-10 at 7 37 47 AM" src="https://github.com/user-attachments/assets/97d61d08-e275-4480-9dc8-87f95f3b25f5">
 
 # API
 The app fetches book data from a free book API. The base URL used in the project is:
