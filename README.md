@@ -1,6 +1,19 @@
 # LloydsAssessment
 A SwiftUI-based iOS application that displays a list of books using data fetched from an API. The app is built with performance, scalability, maintainability, and testability in mind, featuring a clean architecture with an MVVM pattern, API service, and UI test cases.
 
+
+## Dashboard
+
+Here’s a screenshot of the main dashboard where the list of books is displayed:
+
+<img width="200" alt="Dashboard" src="https://github.com/user-attachments/assets/14d7826a-bfda-40d0-9aaa-db5e23ad9103">
+
+## Loading Screen
+
+Below is the screenshot of the loading screen displayed while fetching data:
+
+<img width="200" alt="Loading" src="https://github.com/user-attachments/assets/63e05f22-fc90-4dca-a068-47bc83135547">
+
 # Features
 -> Display a list of books with details like title, author, and publication year.
 
