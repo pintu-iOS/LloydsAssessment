@@ -49,7 +49,7 @@ The app fetches book data from a free book API. The base URL used in the project
 
 -> https://postman-library-api.glitch.me/books
 
-The API returns book details including id, title, author, publication_year, genre, description, and cover_image.
+The API returns book details including id, title, author, publication year, genre, checkedOut, and createdAt.
 
 # Unit Testing
 Unit tests have been written for the following components:
