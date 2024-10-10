@@ -51,6 +51,22 @@ The app fetches book data from a free book API. The base URL used in the project
 
 The API returns book details including id, title, author, publication year, genre, checkedOut, and createdAt.
 
+# Installation
+To run the project, follow these steps:
+1. Clone the repository.
+   ```bash
+   git clone https://github.com/pintu-iOS/LloydsAssessment.git
+2. Open the project in Xcode.
+3. Select the appropriate scheme and run it on the iOS Simulator or a physical device.
+
+# Compatibility
+This app is compatible with:
+iOS 16.2 and above
+
+# Testing
+The app has been tested on:
+iOS 16.2
+
 # Unit Testing
 Unit tests have been written for the following components:
 
