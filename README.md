@@ -3,20 +3,32 @@ A SwiftUI-based iOS application that displays a list of books using data fetched
 
 # Features
 -> Display a list of books with details like title, author, and publication year.
+
 -> Support for lazy loading with pagination (loading more books when the user scrolls).
+
 -> Loading indicators for a better user experience.
+
 -> Error handling with user-friendly alerts.
+
 -> Unit tests for view models and network requests.
+
 -> UI tests to verify the functionality of views.
 
 # Technologies Used
 -> Swift 5
+
 -> SwiftUI
+
 -> Combine
+
 -> MVVM architecture
+
 -> URLSession for networking
+
 -> Codable for JSON decoding
+
 -> ViewInspector for UI testing
+
 -> XCTest for unit testing
 
 # Architecture
@@ -66,5 +78,7 @@ The API returns book details including id, title, author, publication_year, genr
 Unit tests have been written for the following components:
 
 **APIServiceTests.swift:** This file contains unit tests for the APIService class, validating the data fetching logic and error handling when interacting with the API.
+
 **BookModelTests.swift:** This file tests the Book model, ensuring that the properties and methods function correctly and that the model conforms to the expected protocols.
+
 **BookViewModelTests.swift:** This tests the logic for fetching books and managing the book list, including scenarios for online and offline states, as well as loading more books as needed.
