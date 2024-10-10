@@ -35,8 +35,11 @@ A SwiftUI-based iOS application that displays a list of books using data fetched
 This project follows the MVVM (Model-View-ViewModel) architecture pattern. The responsibilities are split as follows:
 
 **Model**: Defines the Book structure and the API error types.
+
 **View**: The SwiftUI views (e.g., BooksListView, BookListRowView) handle the presentation layer and user interactions.
+
 **ViewModel**: (BookViewModel) manages the business logic, state, and interacts with the APIService to fetch data.
+
 **Service**: (APIService) is responsible for making network requests to fetch the book data from the API.
 
 LloydsAssessment/
